@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1,0">
+        <title>Kosovare Dubova - Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/a0c54ad0ec.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+<div id="header">
+<div class="container">
+    <nav>
+        <img src="logo.png" class="logo">
+        <ul id="sidemenu">
+        <li><a href="#header">Etusivu</a></li>
+        <li><a href="#Tietoja minusta">Tietoja minusta</a></li>
+        <li><a href="#Projektit">Projektit</a></li>
+        <li><a href="#Ota yhteyttä!">Ota yhteyttä!</a></li>
+        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+        </ul>
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+    </nav>
+    <div class="header-text">
+        <h1><span>Hei! Minä olen</span><br>Kosovare Dubova</h1>
+        <p>Tulevaisuuden IT-ammattilainen</p>
+    </div>
+</div>
+</div>
+<!---------- Tietoja minusta ----------- -->
+<section class="Tietoja minusta"></section>
+<div id="Tietoja minusta">
+    <div class="container">
+    <div class="row">
+<div class="Tietojaminusta-col-1">
+    <img src="Tietoja.minusta.jpg">
+</div>
+<div class="Tietojaminusta-col-2">
+    <h1 class="sub-title">Tietoja minusta</h1>
+    <p>Olen intohimoinen IT-alan opiskelija, joka rakastaa haasteita ja uuden oppimista.
+        Olen töissä vakuutusyhtiössä, missä olenkin saanut mahdollisuuden soveltaa IT-taitojani.
+        Tervetuloa tutustumaan osaamiseeni ja projekteihini!</p>
+    </section>
+        <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('Taidot', event)">Taidot</p>
+            <p class="tab-links" onclick="opentab('Työkokemus', event)">Työkokemus</p>
+            <p class="tab-links" onclick="opentab('Koulutus', event)">Koulutus</p>
+        </div>
+        <div class="tab-contents active-tab" id="Taidot">
+        <ul>
+            <li>Tekoäly ja koneoppiminen<br><span>Robotiikan kehitystyö</span></li>
+        </ul>
+    </div>
+        <div class="tab-contents" id="Työkokemus">
+            <ul>
+                <li>2023 - edelleen<br><span>Korvausneuvoja vakuutusyhtiössä</span></li>
+                <li>2023 - edelleen<br><span>Robo-lähettiläs vakuutusyhtiössä</span></li>
+            </ul>
+        </div>
+        <div class="tab-contents" id="Koulutus">
+            <ul>
+                <li>Valmistumisvuosi 2018<br><span>Lukio</span></li>
+                <li>2023 - edelleen<br><span>IT-tradenomin opinnot</span></li>
+            </ul>
+        </div>
+</div>
+    </div>
+    </div>
+</div>
+<!-- ---------Projektit----- -->
+<div id="Projektit">
+<div class="container">
+    <h1 class="sub-title">Projektit</h1>
+    <div class="work-list">
+        <div class="work">
+            <img src="projekti3.jpg">
+            <div class="layer">
+                <h3>Korvauskäsittelijärobo</h3>
+                <p>Robottijärjestelmä, joka mahdollistaa lakisääteisten päätösten automatisoinnin hyödyntäen 
+                    edistynyttä tietotekniikkaa ja tekoälyä.</p>
+                </div>
+            </div>
+    
+            </div>
+    </div>
+</div>
+</div>
+<!-- ---------Yhteystiedot---------- -->
+<div id="Ota yhteyttä!">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Ota yhteyttä!</h1>
+                <p><i class="fa-solid fa-envelope"></i>koso.arifi@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>0451102131</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/dubovakosovare/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/people/Kosovare-Dubova/pfbid02XCQs9DE7ZDEKyhdyJxbizi1jsQXf3kHHKtiFaRBd9H4xLEmgK7DgdZWRmtK3WkKol/"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+            <form name="submit-to-google-sheet">
+                <input type="text" name="Name" placeholder="Nimi" required>
+                <input type="email" name="Email" placeholder="Sähköpostiosoite" required>
+                <textarea name="Message" rows="6" placeholder="Kirjoita viesti"></textarea>
+                <button type="submit" class="btn btn2">Lähetä</button>
+            </form>
+            <span id="msg"></span>
+        </div>
+    </div>
+</div>
+<div class="copyright">
+    <p>Copyright © Kosovare <i class="fa-regular fa-heart"></i></p>
+  </div>
+ </div>
+
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname, event) {
+        for(tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<script>
+
+    var sidemenu = document.getElementById("sidemenu");
+
+function openmenu(){
+    sidemenu.style.right = "0"
+}
+function closemenu(){
+    sidemenu.style.right = "-200px";
+}
+
+</script>
+
+  </script>
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbx26KaXDAm40tsqfZEz9NNUkU7jUL8vO0whpEE2d1eYbKqk9uGwZ2KFhRBKlH-xKYQ/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Viestisi on vastaanotettu."
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+             })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+    </body>
+    </html>
